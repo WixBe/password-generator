@@ -1,1 +1,142 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-color: rgb(19, 18, 24);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    accent-color: rgb(171, 247, 182);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50vh;
+}
+
+.gen-box {
+    background-color: rgb(36, 35, 43);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    box-sizing: border-box;
+    padding: 0 2rem 0;
+    margin-bottom: 1rem;
+}
+
+
+.form-container {
+    background-color: rgb(36, 35, 43);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 1rem;
+    width: 100%;
+    color: white;
+}
+
+form {
+    width: 100%;
+}
+
+.box-title {
+    color: rgba(255, 255, 255, 0.5);
+    padding: 1rem;
+    height: fit-content;
+}
+
+.length-slider {
+    width: 100%;
+}
+
+#length {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: rgb(171, 247, 182);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+#length::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #6dc000;
+    cursor: pointer;
+}
+
+.length-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.strength-box {
+    background-color: rgb(24, 23, 31);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    padding: 1rem 3.2rem;
+}
+
+.strength-rating {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.generate-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+    gap: 1rem;
+
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: hsl(247, 11%, 15%);
+    cursor: pointer;
+
+    width: 100%;
+    padding: 1rem 0;
+    border: 2px solid;
+    background-color: inherit;
+    color: rgb(171, 247, 182);
+}
+
+.strength-rating-bars {
+    display: flex;
+}
+
+.bar {
+    width: 10px;
+    height: 20px;
+    margin-right: 0.5rem;
+    background-color: hsl(247, 11%, 15%);
+    border: 2px solid #6dc000;
+}
+
+.bar.active {
+    background-color: #A4FFAF;
+    border-color: #A4FFAF;
+}
