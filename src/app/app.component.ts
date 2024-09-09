@@ -20,6 +20,9 @@ export class AppComponent {
   length: number = 15;
   passwordStrength: number = 0;
   password: string = '';
+  strarr: string[] = ['weak', 'medium', 'strong', 'very strong', 'scene']
+  prstr: string = ''
+  
 
   checkboxes = [
     {id: 'upcase', label: 'Include Uppercase Letters', checked: false},
@@ -51,6 +54,8 @@ export class AppComponent {
     if (this.lowcase) this.passwordStrength++;
     if (this.numbers) this.passwordStrength++;
     if (this.symbols) this.passwordStrength++;
+
+    this.prstr = this.strarr[this.passwordStrength];
   }
   generatePassword() {
   
@@ -70,4 +75,5 @@ export class AppComponent {
     .join('');
     this.calculateStrength();
   }
+
 }

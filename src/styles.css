@@ -93,16 +93,24 @@ form {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-sizing: border-box;
 
     text-transform: uppercase;
     margin-bottom: 1rem;
-    padding: 1rem 3.2rem;
+    padding: 1rem 1rem;
 }
 
 .strength-rating {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 1rem;
+    width: 100%;
+}
+
+.strength-rating-text {
+    margin-left: 10px;
+
 }
 
 .generate-btn {

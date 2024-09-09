@@ -31,9 +31,9 @@
         <p class="symbols"><input type="checkbox" [(ngModel)]="symbols" (change)="onCheckboxChange()" name="symbols"> Include Symbols</p>
       </div>
       <div class="strength-box">
-        <span class="strength-label">Strength</span>
+        <span class="strength-label">Strength:</span>
         <div class="strength-rating">
-          <span class="strength-rating-text"></span>
+          <span class="strength-rating-text">{{ prstr }}</span>
           <div class="strength-rating-bars">
             <div class="bar" [ngClass]="{'active' : passwordStrength >= 1}"></div>
             <div class="bar" [ngClass]="{'active' : passwordStrength >= 2}"></div>
