@@ -2,9 +2,7 @@
   <p class="box-title">Password Generator</p>
   <div class="gen-box">
     <h3 class="gen-box-password">{{ password }}</h3>
-    <button class="copy-btn">
-      <i class="fas fa-copy"></i>
-    </button>
+    <button class="copy-btn" (click)="copyPassword()"><i class="fa-solid fa-copy"></i></button>
   </div>
   <div class="form-container">
     <form action="post">

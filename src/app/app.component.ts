@@ -20,7 +20,7 @@ export class AppComponent {
   length: number = 15;
   passwordStrength: number = 0;
   password: string = '';
-  strarr: string[] = ['weak', 'medium', 'strong', 'very strong', 'scene']
+  strarr: string[] = ['','weak', 'medium', 'strong', 'very strong']
   prstr: string = ''
   
 
@@ -74,6 +74,16 @@ export class AppComponent {
     .map(() => charSet.charAt(Math.floor(Math.random() * charSet.length)))
     .join('');
     this.calculateStrength();
+  }
+
+  copyPassword() {
+    const input = document.createElement('input');
+    input.value = this.password;
+    document.body.appendChild(input);
+    input.select();
+    document.execCommand('copy');
+    input.remove();
+    alert('Password copied to clipboard');
   }
 
 }
